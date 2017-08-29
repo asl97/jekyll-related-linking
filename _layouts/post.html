@@ -23,7 +23,7 @@ layout: default
     {% comment %} This page link to them {% endcomment %}
     {% for related_post in page.related_posts %}
       {% if related_post.path == p.path %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
         {% break %}
       {% endif %}
     {% endfor %}
@@ -31,7 +31,7 @@ layout: default
     {% comment %} Their page link to us {% endcomment %}
     {% for related_post in p.related_posts %}
       {% if related_post.path == page.path %}
-        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
         {% break %}
       {% endif %}
     {% endfor %}
