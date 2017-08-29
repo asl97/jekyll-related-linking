@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign has_related=false %}
+
+{% for p in site.posts %}
+  {% for related_post in p.related_posts %}
+    {% if related_post.path == page.path %}
+        {% assign has_related=true %}
+        {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if has_related or page.related_posts %}
+  <h4>Related</h4>
+  <ul>
+  {% for p in site.posts %}
+
+    {% comment %} This page link to them {% endcomment %}
+    {% for related_post in page.related_posts %}
+      {% if related_post.path == p.path %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Their page link to us {% endcomment %}
+    {% for related_post in p.related_posts %}
+      {% if related_post.path == page.path %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+  {% endfor %}
+  </ul>
+{% endif %}

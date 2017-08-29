@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "G"
+date:   2017-08-07 00:00:00 +0000
+categories: jekyll update
+
+related_posts:
+- path: _posts/2017-08-29-A.markdown
+---
+
+This is G, This should have two linkback.

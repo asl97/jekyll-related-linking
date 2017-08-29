@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "C"
+date:   2017-08-03 00:00:00 +0000
+categories: jekyll update
+
+related_posts:
+- path: _posts/2017-08-29-A.markdown
+- path: _posts/2017-08-29-D.markdown
+---
+
+This is C, this should have one forwardlink and one backlink

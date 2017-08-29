@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "D"
+date:   2017-08-04 00:00:00 +0000
+categories: jekyll update
+---
+
+This is D, this should have two forwardlink and two backlink
